@@ -11,7 +11,6 @@ DATABASE_URL = "mysql+pymysql://park:park@192.168.0.34/mastere"
 database = Database(DATABASE_URL)
 Base = declarative_base()
 
-
 class Voca(Base):
     __tablename__ = 'vocas'
 
