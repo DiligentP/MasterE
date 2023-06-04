@@ -12,6 +12,6 @@
   "action": {
     "default_icon": "images/32.png",
     "default_title": "MasterE",
-    "default_popup": "popup/popup.html"
+    "default_popup": "page/start.html"
   }
 }
