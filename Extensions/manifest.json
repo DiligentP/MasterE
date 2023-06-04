@@ -9,6 +9,9 @@
     "48": "images/48.png",
     "128": "images/128.png"
   },
+  "background": {
+    "service_worker": "/scripts/background.js"
+  },
   "action": {
     "default_icon": "images/32.png",
     "default_title": "MasterE",
