@@ -13,8 +13,5 @@
     "default_icon": "images/32.png",
     "default_title": "MasterE",
     "default_popup": "page/start.html"
-  },
-  "background": {
-    "service_worker": "scripts/background.js"
   }
 }
