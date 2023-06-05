@@ -6,25 +6,44 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
 </head>
 <body>
-    <main>
-        <!-- Header -->
-        <header class="container">
-            <hgroup>
-                <h1>MasterE</h1>
-                <h2>영어 단어를 쉽게 암기할 수 있도록 도와주는 서비스 입니다.</h2>
-            </hgroup>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="main.html" role="button" class="secondary">시작하기</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <!-- ./ Header -->
-    </main>
-    <script src="https://raw.githubusercontent.com/DiligentP/MasterE/main/Extensions/scripts/popup.js?token=GHSAT0AAAAAACC6HHIYI7HUXEADMHXLN762ZD4PJPA">
-
-    </script>
+    <Header class="container">
+        <hgroup>
+            <h1>MasterE</h1>
+            <h2>영어 단어를 쉽게 암기할 수 있도록 도와주는 서비스 입니다.</h2>
+        </hgroup>
+        <nav>
+            <ul>
+                <li>
+                    <a href="main.html" role="button" class="secondary">시작하기</a>
+                </li>
+                <li>
+                    <a href="main.html" role="button" class="secondary">로그인</a>
+                </li>
+            </ul>
+        </nav>
+    </Header>
+    <Body>
+        <dialog close>
+            <article>
+              <header>
+                <a href="#close" aria-label="Close" class="close"></a>
+                Modal title
+              </header>
+              <p>
+                Nunc nec ligula a tortor sollicitudin dictum in vel enim. 
+                Quisque facilisis turpis vel eros dictum aliquam et nec turpis. 
+                Sed eleifend a dui nec ullamcorper. 
+                Praesent vehicula lacus ac justo accumsan ullamcorper.
+              </p>
+            </article>
+          </dialog>
+    </Body>
+    <style>
+        body {
+          width: 350px; /* 원하는 가로 크기 */
+          height: 200px; /* 원하는 세로 크기 */
+        }
+      </style>
 </body>
+
 </html>
