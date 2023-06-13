@@ -4,7 +4,7 @@ __pycache__
 venv
 
 # FE
-./FE/react-app/node_modules/
+/FE/react-app/node_modules/
 
 # testing
 /coverage
