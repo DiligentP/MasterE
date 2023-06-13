@@ -15,3 +15,10 @@ create user '사용자 이름'@'ip주소' identified by '비밀번호';
 
 # 참고
 https://velog.io/@jkjan/Docker-MySQL-%EC%9B%90%EA%B2%A9-%EC%A0%91%EC%86%8D
+
+
+# FastAPI 구동
+```
+uvicorn main:app --reload
+uvicorn main:app --reload --host 192.168.0.34 --port 8000
+```
