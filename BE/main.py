@@ -6,7 +6,7 @@ from databases import Database
 
 app = FastAPI()
 
-DATABASE_URL = "mysql+pymysql://park:qkrwjdgus@localhost/mastere"
+DATABASE_URL = "mysql+pymysql://park:qkrwjdgus@127.0.0.1/mastere"
 
 database = Database(DATABASE_URL)
 Base = declarative_base()
