@@ -7,6 +7,9 @@ docker-compose up -d
 ## MySQL 컨테이너 접근
 docker exec -it [컨테이너 이름] bash
 
+## Mysql 접속
+mysql -u root -p
+
 ## 원격 접속 허용
 grant all privileges on *.* to 'root'@'%';
 
