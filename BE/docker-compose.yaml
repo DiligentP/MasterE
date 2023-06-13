@@ -23,6 +23,7 @@ services:
       - mysql-data:/var/lib/mysql
 
   app:
+    image: fastapi-image  # 이미지 이름을 지정합니다.
     build:
       context: .
       dockerfile: Dockerfile
