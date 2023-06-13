@@ -37,3 +37,4 @@ services:
       - MYSQL_DB=mastere
     depends_on:
       - db
+    restart: always
