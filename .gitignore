@@ -4,10 +4,7 @@ __pycache__
 venv
 
 # FE
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+/FE/react-app/node_modules/
 
 # testing
 /coverage
@@ -25,3 +22,4 @@ venv
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
