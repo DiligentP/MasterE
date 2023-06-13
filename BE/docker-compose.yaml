@@ -8,7 +8,7 @@ volumes:
 services:
   db:
     image: mysql
-    container_name: mysql-mastere
+    container_name: mysql-container
     ports:
       - "3306:3306"
     environment:
@@ -21,3 +21,19 @@ services:
       - --skip-character-set-client-handshake
     volumes:
       - mysql-data:/var/lib/mysql
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fastapi-container
+    ports:
+      - "8000:8000"
+    environment:
+      - MYSQL_HOST=localhost
+      - MYSQL_PORT=3306
+      - MYSQL_USER=park
+      - MYSQL_PASSWORD=qkrwjdgus
+      - MYSQL_DB=mastere
+    depends_on:
+      - db
