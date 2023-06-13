@@ -3,7 +3,7 @@ FROM ubuntu:latest
 
 # 패키지 설치 node 14.x
 RUN apt-get update \
-    && apt-get install -y curl ssh git \
+    && apt-get install -y curl ssh \
     && curl -sL https://deb.nodesource.com/setup_14.x | bash \
     && apt-get install -y nodejs
 
@@ -18,8 +18,9 @@ EXPOSE 22
 # 작업 디렉토리 생성 및 설정
 WORKDIR /frontend-data
 
-# 프로젝트 가져오기
-RUN git clone DiligentP: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@github.com/DiligentP/MasterE.git
+# 도커 볼륨과 파일 동기화
+VOLUME /frontend-dev
+COPY . /frontend-data
 
 # 실행할 명령 설정
 CMD [ "node", "--version" ] 
