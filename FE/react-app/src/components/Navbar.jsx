@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = (props) => {
     return (
         <>
             <nav>
@@ -8,7 +8,11 @@ const Navbar = () => {
                     <li><strong> <Link to={"/"}> MasterE </Link> </strong></li>
                 </ul>
                 <ul>
-                    <li><Link to={"/Login"}> 로그인 </Link></li>
+                    { props.isLoggedIn ?
+                        <li><Link to={"/Mypage"}> 내정보 </Link></li> :
+                        <li><Link to={"/Login"}> 로그인 </Link></li>
+                    }
+
                 </ul>
             </nav>
         </>
