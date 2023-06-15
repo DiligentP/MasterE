@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
+from sqlalchemy.sql import select, func
 from databases import Database
 
 app = FastAPI()
@@ -45,10 +46,16 @@ async def create_voca(word: str, mean: str, source: str):
 
     return {"message": "Voca created successfully"}
 
+@app.get("/vocas/allofcount")
+async def get_all_of_count():
+    query = select(func.count()).select_from(Voca.__table__)
+    result = await database.fetch_val(query)
+    return {"count": result}
 
-@app.get("/vocas/{word}")
-async def read_voca(word: str):
-    query = Voca.__table__.select().where(Voca.word == word)
+
+@app.get("/vocas/{id}")
+async def get_voca_by_id(id: int):
+    query = Voca.__table__.select().where(Voca.id == id)
     result = await database.fetch_one(query)
 
     if result is None:
@@ -57,6 +64,16 @@ async def read_voca(word: str):
     voca = dict(result)
     return voca
 
+@app.get("/vocas/{word}")
+async def get_voca(word: str):
+    query = Voca.__table__.select().where(Voca.word == word)
+    result = await database.fetch_one(query)
+
+    if result is None:
+        return {"message": "Voca not found"}
+
+    voca = dict(result)
+    return voca
 
 @app.put("/vocas/{word}")
 async def update_voca(word: str, mean: str, source: str):

@@ -24,7 +24,10 @@ CREATE TABLE vocas (
     source VARCHAR(255)
 );
 
+-- 계정 테이블 생성
+CREATE TABLE users (
 
+);
 
 
 
