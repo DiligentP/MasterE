@@ -7,6 +7,15 @@ from databases import Database
 
 app = FastAPI()
 
+# CORS 설정
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # 모든 도메인 허용
+    allow_credentials=True,
+    allow_methods=["GET", "POST", "PUT", "DELETE"],
+    allow_headers=["*"],
+)
+
 DATABASE_URL = "mysql+pymysql://park:qkrwjdgus@192.168.0.32/mastere"
 
 database = Database(DATABASE_URL)
