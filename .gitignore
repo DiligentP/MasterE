@@ -5,6 +5,7 @@ venv
 
 # FE
 /FE/react-app/node_modules/
+/FE/react-app/build/
 
 # testing
 /coverage
