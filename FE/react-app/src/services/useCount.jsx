@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
-import {server} from "../services/api";
+import {server} from "./server";
 
 const useCount = () => {
     const [count, setCount] = useState(0);

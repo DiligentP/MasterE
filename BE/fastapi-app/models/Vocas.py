@@ -2,7 +2,7 @@ from ... import database
 from sqlalchemy import Column, Integer, String
 
 
-class Voca(database.Base):
+class Vocas(database.Base):
     __tablename__ = 'vocas'
 
     id = Column(Integer, primary_key=True)

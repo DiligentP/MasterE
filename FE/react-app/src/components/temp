@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Preview • Pico.css</title>
+    <meta
+      name="description"
+      content="A starter example with all elements and components used in Pico design system. Built with Pico CSS."
+    />
+    <link rel="shortcut icon" href="https://picocss.com/favicon.ico" />
+    <link rel="canonical" href="https://picocss.com/examples/preview/" />
+
+    <!-- Pico.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="container"></header>
+    <!-- ./ Header -->
+
+    <!-- Main -->
+    <main class="container">
+      <!-- Typography-->
+      <section id="typography">
+        <h2>Typography</h2>
+        <p>
+          Aliquam lobortis vitae nibh nec rhoncus. Morbi mattis neque eget
+          efficitur feugiat. Vivamus porta nunc a erat mattis, mattis feugiat
+          turpis pretium. Quisque sed tristique felis.
+        </p>
+
+
+      <!-- Form elements-->
+      <section id="form">
+        <form>
+          <h2>단어 검색</h2>
+          <!-- Search -->
+          <input type="search" id="search" name="search" placeholder="Search" />
+
+
+
+      <!-- Tables -->
+      <section id="tables">
+        <h2>Tables</h2>
+        <figure>
+          <table role="grid">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Word</th>
+                <th scope="col">Mean</th>
+                <th scope="col">Source</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+      </section>
+      <!-- ./ Tables -->
+
+
+      <!-- Article-->
+      <article id="article">
+        <h2>Article</h2>
+        <p>
+          Nullam dui arcu, malesuada et sodales eu, efficitur vitae dolor. Sed
+          ultricies dolor non ante vulputate hendrerit. Vivamus sit amet
+          suscipit sapien. Nulla iaculis eros a elit pharetra egestas. Nunc
+          placerat facilisis cursus. Sed vestibulum metus eget dolor pharetra
+          rutrum.
+        </p>
+        <footer>
+          <small
+            >Duis nec elit placerat, suscipit nibh quis, finibus neque.</small
+          >
+        </footer>
+      </article>
+      <!-- ./ Article-->
+
+      <!-- Progress -->
+      <section id="progress">
+        <h2>Progress bar</h2>
+        <progress id="progress-1" value="25" max="100"></progress>
+        <progress id="progress-2"></progress>
+      </section>
+      <!-- ./ Progress -->
+
+      <!-- Loading -->
+      <section id="loading">
+        <h2>Loading</h2>
+        <article aria-busy="true"></article>
+        <button aria-busy="true">Please wait…</button>
+      </section>
+      <!-- ./ Loading -->
+    </main>
+    <!-- ./ Main -->
+
+    <!-- Minimal theme switcher -->
+    <script src="js/minimal-theme-switcher.js"></script>
+
+    <!-- Modal -->
+    <script src="js/modal.js"></script>
+  </body>
+</html>

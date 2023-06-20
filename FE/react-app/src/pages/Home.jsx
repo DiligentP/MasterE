@@ -1,27 +1,13 @@
 import React, { useState, useEffect } from "react";
-import axios from 'axios';
 import { Link } from "react-router-dom";
 
 import Navbar from "../components/Navbar";
-import { server } from "../services/api";
+import useCount from "../services/useCount";
 
 const Home = () => {
-    const [count, setCount] = useState(0);
     const [isLoggedIn, setLoggedIn] = useState(false);
+    const count = useCount();
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axios.get(`${server}/vocas/allofcount`);
-                const data = response.data;
-                setCount(data.count);
-            } catch (error) {
-                // 에러 처리
-            }
-        };
-
-        fetchData();
-    }, []);
 
     return (
         <header className="container">
