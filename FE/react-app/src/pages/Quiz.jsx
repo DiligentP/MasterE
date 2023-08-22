@@ -5,9 +5,7 @@
 import Navbar from "../components/Navbar";
 
 const Quiz = () => {
-
     // 랜덤으로 단어 가져오는 로직
-
 
     return(
         <main className="container">
